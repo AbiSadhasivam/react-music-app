@@ -1,0 +1,12 @@
+.container{
+  margin : 20px;
+  width : 100%;
+}
+.song-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pagination{
+  justify-content: center;
+}

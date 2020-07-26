@@ -1,0 +1,42 @@
+.song-card {
+  margin: 10px;
+  width: 200px;
+  position: relative;
+}
+.img-holder {
+  width: 100%;
+  height: 134px;
+  font-size: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transform: translateX(-10px);
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.song-card:hover {
+  opacity: 0.8;
+  box-shadow: 0 4px 7px 0 rgba(0,0,0,0.2),0 4px 6px 0 rgba(0,0,0,0.19) !important
+}
+
+.song-card:hover .middle {
+  background-color: #ac791b;
+  opacity: 0.8;
+}
+.fa-play-circle{
+  color: #000;
+  cursor: pointer;
+}
