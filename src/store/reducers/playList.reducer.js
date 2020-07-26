@@ -6,14 +6,21 @@ import {
   DELETE_SONG_FROM_PLAYLIST,
   EDIT_PLAYLIST,
 } from '../actions/playlist.action';
-let initialState = {
-  playList: [],
-};
+let initialState = {};
 
 const playListReducer = (state = initialState, action) => {
   switch (action.type) {
     case CREATE_PLAYLIST:
-      return {};
+      let playlist = {};
+      playlist[action.data] = {
+        name: action.data,
+        songList: [],
+        createdAt: new Date(),
+      };
+      return {
+        ...state,
+        ...playlist,
+      };
     case ADD_SONG_TO_PLAYLIST:
       return {};
     case DELETE_SONG_FROM_PLAYLIST:

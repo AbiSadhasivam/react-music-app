@@ -5,11 +5,11 @@ export const createSongList = data => {
   return {
     type: ADD_SONG,
     data
-  }
+  };
 }
 export const createAlbumList = data => {
   return {
     type: ADD_ALBUM,
     data
-  }
+  };
 }
