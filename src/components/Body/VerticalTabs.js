@@ -11,6 +11,7 @@ import {
 import classnames from 'classnames';
 import SongList from '../SongList/SonglList';
 import AlbumList from '../AlbumList/AlbumList';
+import PlayList from '../PlayList/PlayList';
 import './VerticalTabs.css';
 
 // import SongList from '../SongList/SongList';
@@ -23,7 +24,7 @@ const VerticalTabs = (props) => {
   };
   // TODO: Change the tab names to generate dynamically
   return (
-    <Row>
+    <Row className='main-ctr'>
       <Col xs='6' sm='4' md='2'>
         <Nav tabs vertical className='nav-custom'>
           <NavItem className='nav-item'>
@@ -46,6 +47,16 @@ const VerticalTabs = (props) => {
               <strong> Albums</strong>
             </NavLink>
           </NavItem>
+          <NavItem>
+            <NavLink
+              className={classnames({ active1: activeTab === '2' })}
+              onClick={() => {
+                toggle('3');
+              }}
+            >
+              <strong> Playlist</strong>
+            </NavLink>
+          </NavItem>
         </Nav>
       </Col>
       <Col xs='5' sm='5' md='9'>
@@ -61,6 +72,13 @@ const VerticalTabs = (props) => {
             <Row>
               <Col sm='12'>
                 <AlbumList></AlbumList>
+              </Col>
+            </Row>
+          </TabPane>
+          <TabPane tabId='3'>
+            <Row>
+              <Col sm='12' className>
+                <PlayList></PlayList>
               </Col>
             </Row>
           </TabPane>

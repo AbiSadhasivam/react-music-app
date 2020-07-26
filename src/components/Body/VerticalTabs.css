@@ -1,3 +1,6 @@
+.main-ctr{
+  height: calc(100% - 60px);
+} 
 .nav-custom{
   margin: 24px;
   border-bottom: none!important;

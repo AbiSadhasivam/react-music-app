@@ -1,0 +1,32 @@
+.playlist-hdr{
+  display: flex;
+  margin: 20px 0 20px 20px;
+  flex-direction: row;
+}
+.img-holder{
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa-music{
+  color: #000;
+}
+.title-ctr{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.title{
+  font-size: 24px;
+  font-family: 'Roboto-Bold';
+}
+.sub-title{
+  margin-top: 10px;
+  font-family: 'Roboto-Light';
+}
+.action-ctr{
+  display: flex;
+  padding: 20px;
+}

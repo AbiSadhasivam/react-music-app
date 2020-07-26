@@ -33,10 +33,30 @@
 }
 
 .song-card:hover .middle {
-  background-color: #ac791b;
+  background-color:var(--main-bg-color);
   opacity: 0.8;
 }
 .fa-play-circle{
   color: #000;
   cursor: pointer;
+}
+.content{
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 10px;
+  width: 200px;
+  padding: 10px;
+}
+.content-title{
+  font-size: 14px;
+  font-family: 'Roboto-Thin';
+  font-weight: 700;
+  display: inline-block;
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
 }
