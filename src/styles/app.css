@@ -1,1 +1,17 @@
 @import "./Roboto/Roboto.css";
+html{
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+.primary{
+  width: 190px;
+  height: 50px;
+  background: var(--main-bg-color)!important;
+  border-radius: 30px!important;
+  margin: 10px;
+  border: 1px solid var(--main-bg-color)!important;
+}
+.disabled{
+  cursor : no-drop;
+}
