@@ -1,6 +1,5 @@
 .playlist-hdr{
   display: flex;
-  margin: 20px 0 20px 20px;
   flex-direction: row;
 }
 .img-holder{
@@ -25,8 +24,16 @@
 .sub-title{
   margin-top: 10px;
   font-family: 'Roboto-Light';
+  padding: 5px;
 }
 .action-ctr{
   display: flex;
-  padding: 20px;
 }
+.add-song-placeholder{
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+

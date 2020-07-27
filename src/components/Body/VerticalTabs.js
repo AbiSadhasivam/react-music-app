@@ -77,7 +77,7 @@ const VerticalTabs = (props) => {
           </TabPane>
           <TabPane tabId='3'>
             <Row>
-              <Col sm='12' className>
+              <Col sm='12'>
                 <PlayList></PlayList>
               </Col>
             </Row>

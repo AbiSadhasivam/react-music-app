@@ -31,7 +31,7 @@ const AlbumList = () => {
         linkClass='page-link'
       />
       <div className='song-container'>
-        {currentalbumList && currentalbumList.map((album) => <Song {...album}></Song>)}
+        {currentalbumList && currentalbumList.map((album) => <Song key={album.id} {...album}></Song>)}
       </div>
     </div>
   );

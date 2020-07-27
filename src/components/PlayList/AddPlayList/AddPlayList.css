@@ -1,4 +1,4 @@
-.add-playlist-ctr{
+.add-playlist-ctr {
   display: flex;
   height: 100%;
   -ms-flex-pack: center;
@@ -12,12 +12,12 @@
   padding: 20px 40px;
   width: 400px;
 }
-.add-playlist-hdr{
+.add-playlist-hdr {
   font-size: 1rem;
   line-height: 1.4;
   margin-bottom: 22px;
 }
-#add-playlist-input{
+#add-playlist-input {
   margin-bottom: 11px;
   border-radius: 30px;
   font-size: 12px;
@@ -25,21 +25,36 @@
   font-family: roboto;
   height: 46px;
 }
-#create-playlist{
+#create-playlist {
   width: 100%;
   border-radius: 30px;
-  background:var(--main-bg-color)!important;
+  background: var(--main-bg-color) !important;
   border: 1px solid var(--main-bg-color);
   margin-bottom: 20px;
 }
-hr{
-  border :0!important;
-  border-bottom : 1px solid rgb(188 30 30)!important;
+hr {
+  border: 0 !important;
+  border-bottom: 1px solid rgb(188 30 30) !important;
   width: 100%;
 }
-.add-playlist-footer{
+.add-playlist-footer {
   padding: 10px 40px;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  cursor: pointer;
+}
+.add-playlist-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.error {
+  font-size: 12px;
+  /* width: 100%; */
+  align-items: center;
+  font-family: Roboto-Bold;
+  color: red;
+  margin-bottom: 10px;
 }

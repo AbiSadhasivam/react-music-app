@@ -22,7 +22,12 @@ const playListReducer = (state = initialState, action) => {
         ...playlist,
       };
     case ADD_SONG_TO_PLAYLIST:
-      return {};
+      let playList = state[action.data.name];
+      playList.songList.push(action.data.song);
+      state[action.data.name] = playList;
+      return {
+        ...state,
+      };
     case DELETE_SONG_FROM_PLAYLIST:
       return {};
     case DELETE_PLAYLIST:

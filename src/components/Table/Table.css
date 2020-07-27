@@ -1,0 +1,57 @@
+ table {
+    border-spacing: 0;
+ }
+.group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+label{
+  font-size: 14px;
+  margin-right: 20px;
+  font-family : 'Roboto-Bold';
+}
+.filet-song{
+  border: none;
+  border-bottom: 1px solid #333;
+  border-radius: 0;
+  font-family : 'Roboto';
+}
+th,
+td {
+  margin: 0;
+  padding: 0.5rem;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Roboto-Thin';
+  padding: 10px;
+  max-width: 450px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+.pagination{
+  margin-top: 20px;
+}
+.pagination button{
+  width: 40px;
+  height: 40px;
+  font-size: 17px;
+  border: 1px solid black;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+th{
+  font-family: 'Roboto-Medium';
+  border-bottom: 1px solid #eee;
+}
+
+.actions{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

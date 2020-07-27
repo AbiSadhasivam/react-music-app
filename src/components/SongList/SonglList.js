@@ -31,7 +31,7 @@ const SongList = () => {
         linkClass='page-link'
       />
       <div className='song-container'>
-        {currentSongList && currentSongList.map((song) => <Song {...song}></Song>)}
+        {currentSongList && currentSongList.map((song) => <Song key={song.id} {...song}></Song>)}
       </div>
     </div>
   );

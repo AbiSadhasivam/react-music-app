@@ -5,15 +5,20 @@ import 'font-awesome/css/font-awesome.min.css';
 const Song = (props) => {
   return (
     <div>
-      <Card className='song-card' >
+      <Card className='song-card'>
         {props.url && <CardImg src={props.url}></CardImg>}
         {!props.url && (
           <div className='img-holder'>
-            <i class='fa fa-music' aria-hidden='true'></i>
+            <i className='fa fa-music' aria-hidden='true'></i>
           </div>
         )}
-        <div class='middle' >
-          <i class='fa fa-play-circle fa-3x'onClick={props.clickHandler} data-name={props.title} aria-hidden='true'></i>
+        <div className='middle'>
+          <i
+            className='fa fa-play-circle fa-3x'
+            onClick={props.clickHandler}
+            data-name={props.title}
+            aria-hidden='true'
+          ></i>
         </div>
       </Card>
       <div className='content'>
