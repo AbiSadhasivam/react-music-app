@@ -36,7 +36,7 @@ const ViewPlayList = (props) => {
   ];
 
   const shuffleSongList = () => {
-    let sortedList = songList.sort(() => Math.random() - 0.5);
+    let sortedList = props.songList(0).sort(() => Math.random() - 0.5);
     setSongList(sortedList);
   };
   useEffect(() => {
@@ -54,7 +54,7 @@ const ViewPlayList = (props) => {
           <div className='sub-title'>
             Created At : {props.createdAt.toDateString()}
           </div>
-          <div className='sub-title'>{props.songList.length} Songs</div>
+          <div className='sub-title'>{songList.length} Songs</div>
         </div>
       </div>
       {songList.length > 0 && (
@@ -73,7 +73,7 @@ const ViewPlayList = (props) => {
         </div>
       )}
       <hr></hr>
-      {props.songList.length > 0 && (
+      {songList.length > 0 && (
         <Table
           modal={modal}
           columns={columns}
@@ -82,7 +82,7 @@ const ViewPlayList = (props) => {
           isSelectionRqd={false}
         />
       )}
-      {props.songList.length === 0 && (
+      {songList.length === 0 && (
         <div className='add-song-placeholder'>
           <span className='title'>Looks very quiet here!</span>
           <span className='sub-title'>Lets add some music!</span>

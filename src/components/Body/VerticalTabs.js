@@ -59,7 +59,7 @@ const VerticalTabs = (props) => {
           </NavItem>
         </Nav>
       </Col>
-      <Col xs='5' sm='5' md='9'>
+      <Col xs='6' sm='8' md='10'>
         <TabContent activeTab={activeTab}>
           <TabPane tabId='1'>
             <Row>

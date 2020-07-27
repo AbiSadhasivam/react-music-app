@@ -11,7 +11,6 @@ const AddPlayList = (props) => {
   const [error, setError] = useState('');
   const playLists = useSelector((state) => state.playList);
   const createPlayList = () => {
-    // TODO: Check if the playlist of the name is already available
     let playListNames = Object.keys(playLists);
     if (playListNames.indexOf(name) != -1) {
       setError('A Playlist of same name is already available!!!');
