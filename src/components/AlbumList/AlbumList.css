@@ -1,14 +1,18 @@
-.container{
-  margin : 20px;
-  width : 100%;
+.container {
+  margin: 20px;
+  width: 100%;
 }
-.song-container{
+.song-container {
   display: flex;
   flex-wrap: wrap;
   overflow-y: auto;
   height: 480px;
   justify-content: center;
 }
-.pagination{
+.pagination {
   justify-content: center;
+}
+.album-song-list-ctr {
+  height: 450px;
+  overflow: auto;
 }

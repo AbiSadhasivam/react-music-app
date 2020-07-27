@@ -101,13 +101,8 @@ const Table = ({
     selectHandler(selectedSongList);
   };
   return (
-    <div>
-      <table
-        {...getTableProps()}
-        style={{
-          height: '400px',
-        }}
-      >
+    <div className='tbl-ctr'>
+      <table {...getTableProps()} className='custom-tbl'>
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>

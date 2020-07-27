@@ -62,6 +62,11 @@ th {
   padding: 0.25rem;
   background-color: #fff;
   border: 1px solid #dee2e6;
-  border-radius: 50%
+  border-radius: 50%;
 }
-table{width: 100%;}
+.custom-tbl {
+  width: 100%;
+}
+.tbl-ctr {
+  margin-top: 10px;
+}

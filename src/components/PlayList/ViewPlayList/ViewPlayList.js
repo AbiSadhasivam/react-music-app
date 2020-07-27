@@ -10,7 +10,6 @@ const ViewPlayList = (props) => {
     {
       Header: '',
       Cell: (row) => {
-        console.log(row);
         return (
           <div>
             <img

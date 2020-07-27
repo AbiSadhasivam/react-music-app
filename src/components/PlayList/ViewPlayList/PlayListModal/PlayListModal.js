@@ -16,7 +16,6 @@ const PlayListModal = (props) => {
     {
       Header: '',
       Cell: (row) => {
-        console.log(row);
         return (
           <div>
             <img
@@ -118,7 +117,6 @@ const PlayListModal = (props) => {
   return (
     <div>
       <Button className='primary' onClick={toggle}>
-        {' '}
         Add Songs
       </Button>
       <Modal isOpen={modal} toggle={toggle} className='modal-title'>
