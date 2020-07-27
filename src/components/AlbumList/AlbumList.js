@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import './AlbumList.css';
 import Song from '../Song/Song';
 import Pagination from 'react-js-pagination';
@@ -21,7 +21,6 @@ const AlbumList = () => {
   return (
     <div className='container'>
       <Pagination
-        hideDisabled
         activePage={currentPage}
         pageRangeDisplayed={PER_PAGE}
         totalItemsCount={albumList.length}

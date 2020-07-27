@@ -43,7 +43,7 @@ const PlayListModal = (props) => {
       (songList, albumList, playList) => {
         songList.forEach((song) => {
           albumList.forEach((album) => {
-            if (album.id == song.albumId) {
+            if (album.id === song.albumId) {
               song['albumTitle'] = album.title;
               song['artist'] = 'Artist';
               song['duration'] = (Math.random() * 10).toFixed(2);
@@ -71,7 +71,6 @@ const PlayListModal = (props) => {
         //     }));
         //   });
 
-
         //   return filteredSongList;
         // }
         return songList;
@@ -93,10 +92,11 @@ const PlayListModal = (props) => {
   };
 
   const addSongs = (selectedSongs) => {
-    selectedSongs.map((song) => {
+    selectedSongs.forEach((song) => {
       dispatch(storeAction.addSongToPlaylist({ name: props.name, song: song }));
     });
     toggle();
+    return;
   };
 
   return (

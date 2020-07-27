@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Card, CardImg, CardBody, CardTitle } from 'reactstrap';
+import React from 'react';
+import { Card, CardImg } from 'reactstrap';
 import './Song.css';
 import 'font-awesome/css/font-awesome.min.css';
 const Song = (props) => {

@@ -1,4 +1,5 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
+// TODO : DEfine proptypes
 import { ADD_SONG, ADD_ALBUM } from '../actions/songs.action';
 
 let initialState = {

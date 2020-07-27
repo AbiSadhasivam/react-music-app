@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import {
   CREATE_PLAYLIST,
   ADD_SONG_TO_PLAYLIST,

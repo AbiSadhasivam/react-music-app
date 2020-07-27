@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { apiEndpoints } from '../../constants/apiEndpoints';
 import { apiFetch } from '../../services/apiService/apiService';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import * as storeAction from '../../store/actions/action';
 import Header from '../Header/Header';
 import Body from '../Body/Body';

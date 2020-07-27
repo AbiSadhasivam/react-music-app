@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Input, Button } from 'reactstrap';
 import * as storeAction from '../../../store/actions/action';
@@ -12,7 +12,7 @@ const AddPlayList = (props) => {
   const playLists = useSelector((state) => state.playList);
   const createPlayList = () => {
     let playListNames = Object.keys(playLists);
-    if (playListNames.indexOf(name) != -1) {
+    if (playListNames.indexOf(name) !== -1) {
       setError('A Playlist of same name is already available!!!');
       return;
     }
@@ -38,7 +38,7 @@ const AddPlayList = (props) => {
         <Button
           type='submit'
           id='create-playlist'
-          disabled={name.length == 0}
+          disabled={name.length === 0}
           onClick={createPlayList}
         >
           Create

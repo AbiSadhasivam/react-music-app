@@ -65,7 +65,7 @@ const ViewPlayList = (props) => {
           ></PlayListModal>
           <Button
             className='primary'
-            disabled={songList.length == 0}
+            disabled={songList.length === 0}
             onClick={shuffleSongList}
           >
             Shuffle
