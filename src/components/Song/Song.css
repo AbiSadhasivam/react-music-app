@@ -1,6 +1,6 @@
 .song-card {
   margin: 10px;
-  width: 200px;
+  width: 170px;
   position: relative;
 }
 .img-holder {
@@ -46,7 +46,7 @@
   align-items: center;
   flex-direction: column;
   margin: 10px;
-  width: 200px;
+  width: 164px;
   padding: 10px;
 }
 .content-title{

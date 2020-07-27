@@ -1,11 +1,15 @@
-.container{
-  margin : 20px;
-  width : 100%;
+.container {
+  margin: 20px;
+  width: 100%;
 }
-.song-container{
+.song-container {
   display: flex;
   flex-wrap: wrap;
 }
-.pagination{
+.pagination {
   justify-content: center;
+}
+.songlist-wrapper {
+  overflow: auto;
+  height: 480px;
 }

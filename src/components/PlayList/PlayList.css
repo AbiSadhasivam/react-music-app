@@ -1,5 +1,8 @@
 .playlist-container{
   display: flex;
+  flex-wrap: wrap;
+  height: 450px;
+  overflow: auto;
 }
 .add-playlist-hldr{
   display: flex;

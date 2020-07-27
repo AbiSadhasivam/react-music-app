@@ -5,6 +5,9 @@
 .song-container{
   display: flex;
   flex-wrap: wrap;
+  overflow-y: auto;
+  height: 480px;
+  justify-content: center;
 }
 .pagination{
   justify-content: center;

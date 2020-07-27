@@ -5,7 +5,6 @@ import Table from '../../Table/Table';
 
 import './ViewPlayList.css';
 const ViewPlayList = (props) => {
-  const [modal, setModal] = useState(false);
   const [songList, setSongList] = useState(props.songList);
   const columns = [
     {
@@ -14,7 +13,11 @@ const ViewPlayList = (props) => {
         console.log(row);
         return (
           <div>
-            <img className='thumbnail-img' src={row.row.original.thumbnailUrl} />
+            <img
+              className='thumbnail-img'
+              alt='song-img'
+              src={row.row.original.thumbnailUrl}
+            />
           </div>
         );
       },
@@ -87,7 +90,6 @@ const ViewPlayList = (props) => {
       <hr></hr>
       {songList.length > 0 && (
         <Table
-          modal={modal}
           columns={columns}
           data={songList}
           className='cell'

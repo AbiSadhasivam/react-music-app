@@ -19,7 +19,11 @@ const PlayListModal = (props) => {
         console.log(row);
         return (
           <div>
-            <img className = 'thumbnail-img' src={row.row.original.thumbnailUrl} />
+            <img
+              className='thumbnail-img'
+              alt='song-img'
+              src={row.row.original.thumbnailUrl}
+            />
           </div>
         );
       },
