@@ -9,14 +9,6 @@
   margin : 20px 40px;
 }
 
-.playlist-header{
-  font-size: 34px;
-  margin: 20px 0 40px 20px;
-  font-family: 'Roboto-Light' ;
-  font-weight: 600;
-  justify-content: space-between;
-  display: flex;
-}
 .back:hover{
   font-weight: 700;
   color: var(--main-bg-color);

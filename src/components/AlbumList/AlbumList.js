@@ -13,13 +13,17 @@ const AlbumList = () => {
 
   let handlePageChange = (page) => {
     setCurrentPage(page);
-    setCurrentalbumList(albumList.slice((page - 1) * PER_PAGE, page * PER_PAGE));
+    setCurrentalbumList(
+      albumList.slice((page - 1) * PER_PAGE, page * PER_PAGE)
+    );
   };
   useEffect(() => {
     setCurrentalbumList(albumList.slice(0, PER_PAGE));
   }, [albumList]);
   return (
     <div className='container'>
+      <div className='playlist-header'>Explore the trending albums!</div>
+      <hr/>
       <Pagination
         activePage={currentPage}
         pageRangeDisplayed={PER_PAGE}
@@ -30,7 +34,10 @@ const AlbumList = () => {
         linkClass='page-link'
       />
       <div className='song-container'>
-        {currentalbumList && currentalbumList.map((album) => <Song key={album.id} {...album}></Song>)}
+        {currentalbumList &&
+          currentalbumList.map((album) => (
+            <Song key={album.id} {...album}></Song>
+          ))}
       </div>
     </div>
   );

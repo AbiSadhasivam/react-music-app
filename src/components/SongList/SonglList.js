@@ -20,6 +20,11 @@ const SongList = () => {
   }, [songList]);
   return (
     <div className='container'>
+      <div className='playlist-header'>
+        Listen to your favourite music!
+      </div>
+
+      <hr></hr>
       <Pagination
         activePage={currentPage}
         pageRangeDisplayed={PER_PAGE}
@@ -30,7 +35,8 @@ const SongList = () => {
         linkClass='page-link'
       />
       <div className='song-container'>
-        {currentSongList && currentSongList.map((song) => <Song key={song.id} {...song}></Song>)}
+        {currentSongList &&
+          currentSongList.map((song) => <Song key={song.id} {...song}></Song>)}
       </div>
     </div>
   );

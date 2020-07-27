@@ -14,6 +14,18 @@ const PlayListModal = (props) => {
   const toggle = () => setModal(!modal);
   const columns = [
     {
+      Header: '',
+      Cell: (row) => {
+        console.log(row);
+        return (
+          <div>
+            <img height={34} src={row.row.original.thumbnailUrl} />
+          </div>
+        );
+      },
+      accessor: 'thumbnailUrl',
+    },
+    {
       Header: 'Title',
       sortType: 'alphanumeric',
       accessor: 'title',
