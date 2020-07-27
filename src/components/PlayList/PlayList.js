@@ -49,6 +49,7 @@ const PlayList = () => {
                 title={playList.name}
                 key={id}
                 clickHandler={showMusicList}
+                subTitle={playList.songList.length}
               ></Song>
             ))}
           </div>

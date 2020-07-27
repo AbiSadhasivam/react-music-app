@@ -1,17 +1,19 @@
-.header{
+.header {
   height: 60px;
   border-bottom: 1px solid #eee;
   align-items: center;
   display: flex;
   padding: 0 10px;
 }
-.icon-music{
-  height: 32px!important;
+.icon-music {
+  height: 32px !important;
   transform: translateY(-12%);
-  width: 32px!important;
+  width: 32px !important;
 }
-.app-name{
-  font-size: 16px;
+.app-name {
+  font-size: 20px;
   font-weight: 500;
   padding-left: 20px;
+  font-family: 'Roboto-Medium';
+  color: var(--main-bg-color);
 }

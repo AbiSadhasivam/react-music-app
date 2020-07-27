@@ -29,31 +29,37 @@ const VerticalTabs = (props) => {
         <Nav tabs vertical className='nav-custom'>
           <NavItem className='nav-item'>
             <NavLink
-              className={classnames({ active1: activeTab === '1' }, 'nav-link')}
+              className={classnames(
+                { 'active-tab': activeTab === '1' },
+                'nav-link'
+              )}
               onClick={() => {
                 toggle('1');
               }}
             >
-              <strong>Songs</strong>
+              <i className='fa fa-headphones icon-tab' aria-hidden='true'></i>
+              <strong>Albums</strong>
             </NavLink>
           </NavItem>
           <NavItem>
             <NavLink
-              className={classnames({ active1: activeTab === '2' })}
+              className={classnames({ 'active-tab': activeTab === '2' })}
               onClick={() => {
                 toggle('2');
               }}
             >
-              <strong> Albums</strong>
+              <i className='fa fa-play icon-tab' aria-hidden='true'></i>
+              <strong> Songs</strong>
             </NavLink>
           </NavItem>
           <NavItem>
             <NavLink
-              className={classnames({ active1: activeTab === '2' })}
+              className={classnames({ 'active-tab': activeTab === '3' })}
               onClick={() => {
                 toggle('3');
               }}
             >
+              <i className='fa fa-star icon-tab' aria-hidden='true'></i>
               <strong> Playlist</strong>
             </NavLink>
           </NavItem>
@@ -61,14 +67,14 @@ const VerticalTabs = (props) => {
       </Col>
       <Col xs='6' sm='8' md='10'>
         <TabContent activeTab={activeTab}>
-          <TabPane tabId='1'>
+          <TabPane tabId='2'>
             <Row>
               <Col sm='12'>
                 <SongList></SongList>
               </Col>
             </Row>
           </TabPane>
-          <TabPane tabId='2'>
+          <TabPane tabId='1'>
             <Row>
               <Col sm='12'>
                 <AlbumList></AlbumList>

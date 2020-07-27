@@ -7,7 +7,7 @@ import './Header.css';
 const Header = () => {
   return (
     <div className='header'>
-      <div className='app-name'> Music Library</div>
+      <div className='app-name'> React Music Library</div>
     </div>
   );
 };

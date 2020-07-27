@@ -14,7 +14,7 @@ const ViewPlayList = (props) => {
         console.log(row);
         return (
           <div>
-            <img height={34} src={row.row.original.thumbnailUrl} />
+            <img className='thumbnail-img' src={row.row.original.thumbnailUrl} />
           </div>
         );
       },

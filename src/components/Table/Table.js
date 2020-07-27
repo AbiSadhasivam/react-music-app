@@ -31,6 +31,9 @@ const Table = ({
     {
       columns,
       data,
+      style: {
+        height: '400px', // This will force the table body to overflow and scroll, since there is not enough room
+      },
       initialState: { pageIndex: 0 },
     },
     usePagination,
@@ -99,7 +102,12 @@ const Table = ({
   };
   return (
     <div>
-      <table {...getTableProps()}>
+      <table
+        {...getTableProps()}
+        style={{
+          height: '400px',
+        }}
+      >
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>

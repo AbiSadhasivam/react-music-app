@@ -1,21 +1,21 @@
- table {
-    border-spacing: 0;
- }
-.group{
+table {
+  border-spacing: 0;
+}
+.group {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-label{
+label {
   font-size: 14px;
   margin-right: 20px;
-  font-family : 'Roboto-Bold';
+  font-family: 'Roboto-Bold';
 }
-.filet-song{
+.filet-song {
   border: none;
   border-bottom: 1px solid #333;
   border-radius: 0;
-  font-family : 'Roboto';
+  font-family: 'Roboto';
 }
 th,
 td {
@@ -30,10 +30,10 @@ td {
   overflow: hidden !important;
   text-overflow: ellipsis;
 }
-.pagination{
+.pagination {
   margin-top: 20px;
 }
-.pagination button{
+.pagination button {
   width: 40px;
   height: 40px;
   font-size: 17px;
@@ -45,13 +45,23 @@ td {
   margin: 5px;
 }
 
-th{
+th {
   font-family: 'Roboto-Medium';
   border-bottom: 1px solid #eee;
 }
 
-.actions{
+.actions {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.thumbnail-img {
+  width: 44px;
+  height: 44px;
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 50%
+}
+table{width: 100%;}
