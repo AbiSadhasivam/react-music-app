@@ -17,7 +17,9 @@ const AddPlayList = (props) => {
       return;
     }
     dispatch(storeAction.createPlaylist(name));
-    props.modalHandler();
+    if (props.modalHandler) {
+      props.modalHandler();
+    }
   };
 
   const handleNameChange = (evt) => {
