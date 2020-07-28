@@ -2,10 +2,7 @@ import React from 'react';
 
 import VerticalTabs from './VerticalTabs';
 
-import './Body.css';
-
 const Body = () => {
-  const tabNames = ['Songs', 'Playlist'];
-  return <VerticalTabs tab-names={tabNames}></VerticalTabs>;
+  return <VerticalTabs></VerticalTabs>;
 };
 export default Body;
