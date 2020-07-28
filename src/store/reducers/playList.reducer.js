@@ -23,6 +23,14 @@ const playListReducer = (state = initialState, action) => {
       };
     case ADD_SONG_TO_PLAYLIST:
       let playList = state[action.data.name];
+      let isSongAvailable = playList.songList.filter((song) => {
+        return song.id === action.data.song.id;
+      });
+      if (isSongAvailable.length > 0) {
+        return {
+          ...state,
+        };
+      }
       playList.songList.push(action.data.song);
       state[action.data.name] = playList;
       return {
