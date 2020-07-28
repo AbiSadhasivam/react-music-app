@@ -25,7 +25,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Want to view it live? 
 
- Check out the demo [here](https://serene-basin-90986.herokuapp.com/) 
+ Check out the demo [here](https://react-music-library.herokuapp.com/) 
 
 
  
