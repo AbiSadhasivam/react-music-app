@@ -118,6 +118,7 @@ const PlayListModal = (props) => {
             columns={columns}
             data={filteredData}
             selectHandler={addSongs}
+            bodyClass = 'popup-tbl'
           />
         </ModalBody>
         <ModalFooter>

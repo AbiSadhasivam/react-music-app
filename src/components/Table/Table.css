@@ -72,7 +72,7 @@ th {
 }
 .table-bdy {
   overflow: auto;
-  max-height: 400px;
+  max-height: 380px;
   margin: 20px 0 10px 10px;
 }
 .table-row {
@@ -100,4 +100,8 @@ th {
 }
 .tbl-small {
   height: 200px;
+}
+
+.popup-tbl{
+  max-height: 280px!important;
 }

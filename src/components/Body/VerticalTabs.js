@@ -9,7 +9,7 @@ import {
   Col,
 } from 'reactstrap';
 import classnames from 'classnames';
-import SongList from '../SongList/SonglList';
+import SongList from '../SongList/SongList';
 import AlbumList from '../AlbumList/AlbumList';
 import PlayList from '../PlayList/PlayList';
 import './VerticalTabs.css';

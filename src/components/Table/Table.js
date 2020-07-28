@@ -89,7 +89,15 @@ const Table = ({
       }
       setSelectedSongList(selectedSongList);
     } else {
-      let addedSong = selectedFlatRows.pop().original;
+      let addedSongList = selectedFlatRows.filter((selectedSong) => {
+        return !selectedSongList.some(
+          (song) => selectedSong.original.id === song.id
+        );
+      })
+      if (addedSongList.length === 0) {
+        return
+      }
+      let addedSong = addedSongList[0].original;
       addedSong[
         'addedAt'
       ] = `${new Date().toDateString()}  ${new Date().toTimeString()}`;

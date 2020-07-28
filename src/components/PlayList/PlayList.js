@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import AddPlayList from './AddPlayList/AddPlayList';
 import ViewPlayList from './ViewPlayList/ViewPlayList';
@@ -27,11 +27,8 @@ const PlayList = () => {
 
   useEffect(() => {
     hidePlayListView();
-  }, [])
-  useLayoutEffect((prevSt) => {
-    console.log('efft',prevSt);
-  })
-  
+  }, []);
+
   return (
     <div>
       <div className='add-playlist-hldr'>
