@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-
 import { Button } from 'reactstrap';
+
 import PlayListModal from './PlayListModal/PlayListModal';
 import Table from '../../Table/Table';
 
 import './ViewPlayList.css';
+
 const ViewPlayList = (props) => {
   const [songList, setSongList] = useState(props.songList);
   const playList = useSelector((state) => state.playList);
@@ -54,6 +55,7 @@ const ViewPlayList = (props) => {
     let sortedList = [...songList].sort(() => Math.random() - 0.5);
     setSongList(sortedList);
   };
+  
   useEffect(() => {
     setSongList(props.songList);
   }, [props.songList]);

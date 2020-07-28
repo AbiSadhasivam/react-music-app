@@ -3,6 +3,7 @@ import { Card, CardImg } from 'reactstrap';
 
 import './Song.css';
 import 'font-awesome/css/font-awesome.min.css';
+
 const Song = (props) => {
   const subTitle = props.subTitle || 0;
   return (

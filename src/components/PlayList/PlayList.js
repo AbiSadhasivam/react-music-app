@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { Button, Modal, ModalBody, ModalHeader } from 'reactstrap';
+
 import AddPlayList from './AddPlayList/AddPlayList';
 import ViewPlayList from './ViewPlayList/ViewPlayList';
 import Song from '../Song/Song';
+
 import './PlayList.css';
-import { Button, Modal, ModalBody, ModalHeader } from 'reactstrap';
 
 const PlayList = () => {
   const playLists = useSelector((state) => state.playList);
   const [selectedPlayList, setSelectedPlayList] = useState({});
   const [showSelectedPlayList, setShowSelectedPlayList] = useState(false);
   const [modal, showModal] = useState(false);
+
   const showMusicList = (evt) => {
     let { name } = evt.target.dataset;
     setSelectedPlayList(playLists[name]);
@@ -24,10 +27,6 @@ const PlayList = () => {
   const showAddPlayListModal = () => {
     showModal(!modal);
   };
-
-  useEffect(() => {
-    hidePlayListView();
-  }, []);
 
   return (
     <div>

@@ -10,6 +10,5 @@
   justify-content: center;
 }
 .songlist-wrapper {
-  /* overflow: auto; */
-  /* height: 480px; */
+  overflow: auto;
 }

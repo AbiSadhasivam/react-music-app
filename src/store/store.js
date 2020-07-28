@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from 'redux';
-import {composeWithDevTools} from 'remote-redux-devtools';
+import { composeWithDevTools } from 'remote-redux-devtools';
 
 import reducers from './reducers/reducers';
 import middlewares from './middlewares/middleware';
@@ -14,7 +14,6 @@ export default function getStore() {
 
     store = createStore(
       reducers,
-      // persistedState, // second argument overrides the initial state
       composeEnhancers(applyMiddleware(...middlewares))
     );
   }
