@@ -1,4 +1,5 @@
 // import PropTypes from 'prop-types';
+//TODO : Define proptypes
 import {
   CREATE_PLAYLIST,
   ADD_SONG_TO_PLAYLIST,

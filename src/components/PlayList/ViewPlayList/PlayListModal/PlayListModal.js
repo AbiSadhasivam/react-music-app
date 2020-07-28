@@ -7,11 +7,10 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import Table from '../../../Table/Table';
 import * as storeAction from '../../../../store/actions/action';
 import './PlayListModal.css';
+
 const PlayListModal = (props) => {
   const dispatch = useDispatch();
-
   const [modal, setModal] = useState(false);
-  const toggle = () => setModal(!modal);
   const columns = [
     {
       Header: '',
@@ -50,6 +49,12 @@ const PlayListModal = (props) => {
     },
   ];
 
+  const toggle = () => setModal(!modal);
+
+  /**
+   * Selector to transform the store data ( song and album ) into one single
+   * object
+   */
   const songAndAlbumSelector = () =>
     createSelector(
       (state) => state.songs.songList,
@@ -81,7 +86,10 @@ const PlayListModal = (props) => {
     });
     setFilteredData(data);
   };
-
+  /**
+   * @param  {Object} selectedSongs
+   * Add the selected songs to the store
+   */
   const addSongs = (selectedSongs) => {
     selectedSongs.forEach((song) => {
       dispatch(storeAction.addSongToPlaylist({ name: props.name, song: song }));
@@ -118,7 +126,7 @@ const PlayListModal = (props) => {
             columns={columns}
             data={filteredData}
             selectHandler={addSongs}
-            bodyClass = 'popup-tbl'
+            bodyClass='popup-tbl'
           />
         </ModalBody>
         <ModalFooter>

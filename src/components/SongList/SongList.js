@@ -67,6 +67,7 @@ const SongList = () => {
   const songAndAlbumList = useSelector((state) =>
     selectSongAndAlbum(state, state)
   );
+  
   return (
     <div className='container'>
       <div className='playlist-header'>Listen to your favourite music!</div>

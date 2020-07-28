@@ -1,12 +1,7 @@
 .add-playlist-ctr {
   display: flex;
   height: 100%;
-  -ms-flex-pack: center;
   justify-content: center;
-  -ms-flex-align: center;
-  /* align-items: center; */
-  /* width: 50%; */
-  -ms-flex-direction: column;
   flex-direction: column;
   height: 400px;
   padding: 20px 40px;
@@ -52,7 +47,6 @@ hr {
 }
 .error {
   font-size: 12px;
-  /* width: 100%; */
   align-items: center;
   font-family: Roboto-Bold;
   color: red;

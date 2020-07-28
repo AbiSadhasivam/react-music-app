@@ -31,7 +31,7 @@ const Table = ({
       columns,
       data,
       style: {
-        height: '400px', // This will force the table body to overflow and scroll, since there is not enough room
+        height: '400px',
       },
       initialState: { pageIndex: 0 },
     },
@@ -73,9 +73,14 @@ const Table = ({
   );
 
   useEffect(() => {
+    // If no songs are selected return
     if (selectedFlatRows.length === 0) {
       return;
     }
+    //
+    // If a song is selecte and then un-selected, remove it from the selected
+    // song list
+    //
     if (selectedSongList.length > selectedFlatRows.length) {
       const results = selectedSongList.filter(
         (selectedSong) =>
@@ -88,14 +93,17 @@ const Table = ({
         selectedSongList.splice(index, 1);
       }
       setSelectedSongList(selectedSongList);
+      //
+      // If a song is selected, find the newly added song and add it to the selected song list
+      //
     } else {
       let addedSongList = selectedFlatRows.filter((selectedSong) => {
         return !selectedSongList.some(
           (song) => selectedSong.original.id === song.id
         );
-      })
+      });
       if (addedSongList.length === 0) {
-        return
+        return;
       }
       let addedSong = addedSongList[0].original;
       addedSong[
@@ -109,6 +117,7 @@ const Table = ({
   const addSongsHandler = () => {
     selectHandler(selectedSongList);
   };
+
   return (
     <div className='tbl-ctr'>
       <div {...getTableProps()} className='custom-tbl'>
@@ -188,6 +197,7 @@ const Table = ({
           ))}
         </select>
       </div>
+
       {selectHandler && (
         <div className='actions'>
           <Button
