@@ -98,7 +98,7 @@ const PlayListModal = (props) => {
       <Modal isOpen={modal} toggle={toggle} className='modal-title'>
         <ModalHeader>Add Songs</ModalHeader>
         <ModalBody>
-          <div>
+          <div className='wrapper'>
             <FormGroup className='range-group'>
               <div className='group'>
                 <Label className='inputLabel' for='range-start'>

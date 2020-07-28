@@ -3,8 +3,8 @@
   flex-direction: row;
 }
 .img-holder{
-  width: 164px;
-  height: 164px;
+  width: 124px;
+  height: 124px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,9 +20,9 @@
 .title{
   font-size: 24px;
   font-family: 'Roboto-Bold';
+  padding: 5px;
 }
 .sub-title{
-  margin-top: 6px;
   font-family: 'Roboto-Light';
   padding: 5px;
 }

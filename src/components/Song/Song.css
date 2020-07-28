@@ -1,7 +1,7 @@
 .song-card {
   margin: 10px;
   width: 170px;
-  position: relative;
+  align-items: center;
 }
 .img-holder {
   width: 100%;

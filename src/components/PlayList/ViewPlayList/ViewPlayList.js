@@ -14,13 +14,11 @@ const ViewPlayList = (props) => {
       Header: '',
       Cell: (row) => {
         return (
-          <div>
-            <img
-              className='thumbnail-img'
-              alt='song-img'
-              src={row.row.original.thumbnailUrl}
-            />
-          </div>
+          <img
+            className='thumbnail-img'
+            alt='song-img'
+            src={row.row.original.thumbnailUrl}
+          />
         );
       },
       accessor: 'thumbnailUrl',
@@ -99,7 +97,7 @@ const ViewPlayList = (props) => {
           <Table
             columns={columns}
             data={songList}
-            className='cell'
+            bodyClass = {'tbl-small'}
             isSelectionRqd={false}
           />
         )}

@@ -115,12 +115,11 @@ const AlbumList = () => {
         <div className='album-song-list-ctr'>
           <span className='container back' onClick={hideSongsView}>
             <i className='fa fa-chevron-circle-left' aria-hidden='true'></i>
-            <span className='sub-title pointer'>View All PlayList</span>
+            <span className='sub-title pointer'>View All Albums</span>
           </span>
           <Table
             columns={columns}
             data={filteredSongs}
-            className='cell'
             isSelectionRqd={false}
           />
         </div>

@@ -23,7 +23,7 @@ td {
   font-size: 14px;
   font-weight: 400;
   font-family: 'Roboto-Thin';
-  padding: 10px;
+  padding: 6px;
   max-width: 450px;
   white-space: nowrap;
   overflow: hidden !important;
@@ -56,9 +56,9 @@ th {
 }
 
 .thumbnail-img {
-  width: 44px;
-  height: 44px;
-  padding: 0.25rem;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
   background-color: #fff;
   border: 1px solid #dee2e6;
   border-radius: 50%;
@@ -68,4 +68,36 @@ th {
 }
 .tbl-ctr {
   margin-top: 10px;
+  width: 90%;
+}
+.table-bdy {
+  overflow: auto;
+  max-height: 400px;
+  margin: 20px 0 10px 10px;
+}
+.table-row {
+  display: flex;
+  align-items: center;
+  height: 46px;
+}
+
+.cell {
+  width: 20%;
+  max-width: 40%;
+  padding: 10px;
+  font-size: 14px;
+  font-family: 'Roboto-Light';
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+.header {
+  font-weight: 700;
+}
+.selector {
+  width: 10%;
+}
+.tbl-small {
+  height: 200px;
 }

@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useTable, usePagination, useRowSelect } from 'react-table';
-
 import { Button } from 'reactstrap';
 import './Table.css';
 
 const Table = ({
   columns,
   data,
-  className,
+  bodyClass = '',
   isSelectionRqd = true,
   selectHandler,
 }) => {
@@ -104,33 +103,50 @@ const Table = ({
   };
   return (
     <div className='tbl-ctr'>
-      <table {...getTableProps()} className='custom-tbl'>
-        <thead>
+      <div {...getTableProps()} className='custom-tbl'>
+        <div className='table-hdr'>
           {headerGroups.map((headerGroup) => (
-            <tr {...headerGroup.getHeaderGroupProps()}>
+            <div className='table-row' {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
-                <th {...column.getHeaderProps()}>{column.render('Header')}</th>
+                <div
+                  className={
+                    column.id === 'selection' || column.id === 'thumbnailUrl'
+                      ? 'selector'
+                      : 'cell header'
+                  }
+                  {...column.getHeaderProps()}
+                >
+                  {column.render('Header')}
+                </div>
               ))}
-            </tr>
+            </div>
           ))}
-        </thead>
-        <tbody {...getTableBodyProps()}>
+        </div>
+        <div {...getTableBodyProps()} className={bodyClass + ' table-bdy'}>
           {page.map((row, i) => {
             prepareRow(row);
             return (
-              <tr {...row.getRowProps()}>
+              <div {...row.getRowProps()} className='table-row'>
                 {row.cells.map((cell) => {
                   return (
-                    <td {...cell.getCellProps()} className={className}>
+                    <div
+                      {...cell.getCellProps()}
+                      className={
+                        cell.column.id === 'selection' ||
+                        cell.column.id === 'thumbnailUrl'
+                          ? 'selector'
+                          : 'cell'
+                      }
+                    >
                       {cell.render('Cell')}
-                    </td>
+                    </div>
                   );
                 })}
-              </tr>
+              </div>
             );
           })}
-        </tbody>
-      </table>
+        </div>
+      </div>
       <div className='pagination'>
         <span className='page-data'>
           Page &nbsp;

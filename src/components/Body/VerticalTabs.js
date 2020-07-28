@@ -16,7 +16,7 @@ import './VerticalTabs.css';
 
 // import SongList from '../SongList/SongList';
 
-const VerticalTabs = (props) => {
+const VerticalTabs = () => {
   const [activeTab, setActiveTab] = useState('1');
 
   const toggle = (tab) => {
