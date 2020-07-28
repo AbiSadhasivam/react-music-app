@@ -13,6 +13,5 @@
   justify-content: center;
 }
 .album-song-list-ctr {
-  height: 450px;
   overflow: auto;
 }

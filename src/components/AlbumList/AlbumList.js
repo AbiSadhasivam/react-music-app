@@ -1,3 +1,4 @@
+//Parent Component to list the Albums
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import './AlbumList.css';
@@ -53,13 +54,18 @@ const AlbumList = () => {
       accessor: 'duration',
     },
   ];
+
   const handlePageChange = (page) => {
     setCurrentPage(page);
     setCurrentalbumList(
       albumList.slice((page - 1) * PER_PAGE, page * PER_PAGE)
     );
   };
-
+  /**
+   * View the list of songs for the selected album
+   * @param  {} evt
+   * 
+   */
   const viewSelectedAlbum = (evt) => {
     let { name } = evt.target.dataset;
     setSelectedAlbum(
@@ -69,10 +75,14 @@ const AlbumList = () => {
     );
     setShowSelectedAlbum(true);
   };
-  const hideSongsView = (evt) => {
+  /**
+   * Hide the song view and shows the list of albums
+   */
+  const hideSongsView = () => {
     setShowSelectedAlbum(false);
     setSelectedAlbum({});
   };
+
   useEffect(() => {
     setCurrentalbumList(albumList.slice(0, PER_PAGE));
   }, [albumList]);
@@ -84,6 +94,7 @@ const AlbumList = () => {
       })
     );
   }, [selectedAlbum]);
+
   return (
     <div className='container'>
       <div className='playlist-header'>Explore the trending albums!</div>
