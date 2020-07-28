@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardImg } from 'reactstrap';
+
 import './Song.css';
 import 'font-awesome/css/font-awesome.min.css';
 const Song = (props) => {
@@ -23,7 +24,7 @@ const Song = (props) => {
         </div>
       </Card>
       <div className='content'>
-        <div className='content-title'>{props.title}</div>
+        <div className='content-title' title={props.title}>{props.title}</div>
         {subTitle !== 0 ? (
           <div className='sub-title'>{props.subTitle} Songs</div>
         ) : (

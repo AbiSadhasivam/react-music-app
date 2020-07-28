@@ -27,7 +27,8 @@ const PlayList = () => {
 
   useEffect(() => {
     setShowSelectedPlayList(false);
-  },[])
+  }, [])
+  
   return (
     <div>
       <div className='add-playlist-hldr'>

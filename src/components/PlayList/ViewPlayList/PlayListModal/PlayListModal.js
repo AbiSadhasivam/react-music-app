@@ -54,8 +54,7 @@ const PlayListModal = (props) => {
     createSelector(
       (state) => state.songs.songList,
       (state) => state.songs.albumList,
-      (state) => state.playList,
-      (songList, albumList, playList) => {
+      (songList, albumList) => {
         songList.forEach((song) => {
           albumList.forEach((album) => {
             if (album.id === song.albumId) {
@@ -65,29 +64,6 @@ const PlayListModal = (props) => {
             }
           });
         });
-        // if (
-        //   Object.keys(playList).length &&
-        //   playList[props.name].songList.length
-        // ) {
-        //   let selectedPlayListSongs = playList[props.name].songList || [],
-        //     filteredSongList = [];
-        //   // songList.forEach((song) => {
-        //   //   selectedPlayListSongs.forEach((selectedSong) => {
-        //   //     if (selectedSong.id !== song.id) {
-        //   //       filteredSongList.push(song);
-        //   //     } else {
-        //   //       return
-        //   //     }
-        //   //   });
-        //   // });
-        //   filteredSongList = songList.filter((el) => {
-        //     return !(selectedPlayListSongs.some((f) => {
-        //       return f.id === el.id ;
-        //     }));
-        //   });
-
-        //   return filteredSongList;
-        // }
         return songList;
       }
     );

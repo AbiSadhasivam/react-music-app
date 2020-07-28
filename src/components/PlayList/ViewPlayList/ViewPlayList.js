@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
 import { Button } from 'reactstrap';
 import PlayListModal from './PlayListModal/PlayListModal';
 import Table from '../../Table/Table';
@@ -6,6 +8,7 @@ import Table from '../../Table/Table';
 import './ViewPlayList.css';
 const ViewPlayList = (props) => {
   const [songList, setSongList] = useState(props.songList);
+  const playList = useSelector((state) => state.playList);
   const columns = [
     {
       Header: '',
@@ -50,12 +53,16 @@ const ViewPlayList = (props) => {
   ];
 
   const shuffleSongList = () => {
-    let sortedList = props.songList(0).sort(() => Math.random() - 0.5);
+    let sortedList = [...songList].sort(() => Math.random() - 0.5);
     setSongList(sortedList);
   };
   useEffect(() => {
     setSongList(props.songList);
   }, [props.songList]);
+
+  useEffect(() => {
+    setSongList(playList[props.name].songList);
+  }, [playList]);
 
   return (
     <div className='container'>
@@ -87,14 +94,16 @@ const ViewPlayList = (props) => {
         </div>
       )}
       <hr></hr>
-      {songList.length > 0 && (
-        <Table
-          columns={columns}
-          data={songList}
-          className='cell'
-          isSelectionRqd={false}
-        />
-      )}
+      <div className='song-list-ctr'>
+        {songList.length > 0 && (
+          <Table
+            columns={columns}
+            data={songList}
+            className='cell'
+            isSelectionRqd={false}
+          />
+        )}
+      </div>
       {songList.length === 0 && (
         <div className='add-song-placeholder'>
           <span className='title'>Looks very quiet here!</span>

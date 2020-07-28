@@ -82,10 +82,12 @@ const Table = ({
         (selectedSong) =>
           !selectedFlatRows.some((song) => song.original.id === selectedSong.id)
       );
-      let index = selectedSongList.findIndex(
-        (song) => song.id === results[0].id
-      );
-      selectedSongList.splice(index, 1);
+      if (results.length > 0) {
+        let index = selectedSongList.findIndex(
+          (song) => song.id === results[0].id
+        );
+        selectedSongList.splice(index, 1);
+      }
       setSelectedSongList(selectedSongList);
     } else {
       let addedSong = selectedFlatRows.pop().original;
@@ -166,7 +168,7 @@ const Table = ({
         <div className='actions'>
           <Button
             className='primary'
-            disabled={selectedSongList === 0}
+            disabled={selectedFlatRows.length === 0}
             onClick={addSongsHandler}
           >
             Add Songs
