@@ -10,12 +10,11 @@ const MusicApp = () => {
   const dispatch = useDispatch();
   const [showLoader, setLoaderVisiblity] = useState(false);
 
-  // Visiblity
-
-  let toggleLoader = (isVisible) => {
+  const toggleLoader = (isVisible) => {
     setLoaderVisiblity(isVisible);
   };
-  const fetMusicLibrary = () => {
+
+  const fetchMusicLibrary = () => {
     toggleLoader(true);
     apiFetch(apiEndpoints.albums, 'GET').then(
       (data) => {
@@ -28,19 +27,18 @@ const MusicApp = () => {
           (err) => {
             console.log(err);
             toggleLoader(false);
-            // TODO : Show loader and show error notification
           }
         );
       },
       (err) => {
         console.log(err);
-        // TODO : Show loader and show error notification
+        toggleLoader(false);
       }
     );
   };
 
   useEffect(() => {
-    fetMusicLibrary();
+    fetchMusicLibrary();
   }, []);
 
   return (
