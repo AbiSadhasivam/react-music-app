@@ -9,12 +9,13 @@ import {
   Col,
 } from 'reactstrap';
 import classnames from 'classnames';
+
 import SongList from '../SongList/SongList';
 import AlbumList from '../AlbumList/AlbumList';
 import PlayList from '../PlayList/PlayList';
+
 import './VerticalTabs.css';
 
-// import SongList from '../SongList/SongList';
 
 const VerticalTabs = () => {
   const [activeTab, setActiveTab] = useState('1');
@@ -22,7 +23,6 @@ const VerticalTabs = () => {
   const toggle = (tab) => {
     if (activeTab !== tab) setActiveTab(tab);
   };
-  // TODO: Change the tab names to generate dynamically
   return (
     <Row className='main-ctr'>
       <Col xs='6' sm='4' md='2'>
@@ -66,6 +66,7 @@ const VerticalTabs = () => {
         </Nav>
       </Col>
       <Col xs='6' sm='8' md='10'>
+        
         <TabContent activeTab={activeTab}>
           <TabPane tabId='2'>
             <Row>
